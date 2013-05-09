@@ -26,7 +26,7 @@
 
     <div>
     <%= label_tag :appointment_date %><br />
-    <%= date_select_tag :appointment_date %>
+    <%= date_select :appointment_date, :created_on %>
   </div>
 
     <div>
@@ -39,7 +39,7 @@
     <%= text_field_tag :address %>
   </div>
 
-  
+
   <div>
     <%= submit_tag "Create Job" %>
   </div>
