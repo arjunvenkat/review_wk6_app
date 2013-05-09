@@ -1,0 +1,36 @@
+<h1>Editing Contractor #<%= @contractor.id %></h1>
+
+
+<%= form_tag(contractor_url(@contractor), method: 'put') do %>
+
+  <div>
+    <%= label_tag :category_id %><br />
+    <%= number_field_tag :category_id, @contractor.category_id %>
+  </div>
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @contractor.name %>
+  </div>
+
+  <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, @contractor.email %>
+  </div>
+
+  <div>
+    <%= label_tag :phone %><br />
+    <%= text_field_tag :phone, @contractor.phone %>
+  </div>
+
+  <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address, @contractor.address %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Contractor" %>
+  </div>
+
+<% end %>

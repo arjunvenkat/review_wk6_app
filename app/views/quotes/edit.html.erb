@@ -1,0 +1,26 @@
+<h1>Editing Quote #<%= @quote.id %></h1>
+
+
+<%= form_tag(quote_url(@quote), method: 'put') do %>
+
+  <div>
+    <%= label_tag :job_id %><br />
+    <%= number_field_tag :job_id, @quote.job_id %>
+  </div>
+
+  <div>
+    <%= label_tag :contractor_id %><br />
+    <%= number_field_tag :contractor_id, @quote.contractor_id %>
+  </div>
+
+  <div>
+    <%= label_tag :price %><br />
+    <%= text_field_tag :price, @quote.price %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Quote" %>
+  </div>
+
+<% end %>

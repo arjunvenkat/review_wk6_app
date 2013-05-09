@@ -1,0 +1,46 @@
+<h1>Editing Job #<%= @job.id %></h1>
+
+
+<%= form_tag(job_url(@job), method: 'put') do %>
+
+  <div>
+    <%= label_tag :category_id %><br />
+    <%= number_field_tag :category_id, @job.category_id %>
+  </div>
+
+  <div>
+    <%= label_tag :homeowner_id %><br />
+    <%= number_field_tag :homeowner_id, @job.homeowner_id %>
+  </div>
+
+  <div>
+    <%= label_tag :contractor_id %><br />
+    <%= number_field_tag :contractor_id, @job.contractor_id %>
+  </div>
+
+  <div>
+    <%= label_tag :description %><br />
+    <%= text_field_tag :description, @job.description %>
+  </div>
+
+  <div>
+    <%= label_tag :appointment_date %><br />
+    <%= date_select_tag :appointment_date, @job.appointment_date %>
+  </div>
+
+  <div>
+    <%= label_tag :status %><br />
+    <%= text_field_tag :status, @job.status %>
+  </div>
+
+  <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address, @job.address %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Job" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,31 @@
+<h1>Editing Homeowner #<%= @homeowner.id %></h1>
+
+
+<%= form_tag(homeowner_url(@homeowner), method: 'put') do %>
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @homeowner.name %>
+  </div>
+
+  <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, @homeowner.email %>
+  </div>
+
+  <div>
+    <%= label_tag :phone %><br />
+    <%= text_field_tag :phone, @homeowner.phone %>
+  </div>
+
+  <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address, @homeowner.address %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Homeowner" %>
+  </div>
+
+<% end %>

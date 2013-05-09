@@ -1,0 +1,32 @@
+<h1>Quotes</h1>
+
+<p><%= link_to 'Add a New Quote', new_quote_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job</th>
+      <th>Contractor</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @quotes.each do |quote| %>
+    <tr>
+      <td><%= quote.job_id %></td>
+      <td><%= quote.contractor_id %></td>
+      <td><%= quote.price %></td>
+  
+      <td><%= link_to 'Show', quote_url(quote) %></td>
+      <td><%= link_to 'Edit', edit_quote_url(quote) %></td>
+      <td><%= link_to 'Destroy', quote_url(quote), method: 'delete', data: { confirm: "Do you really want to delete this quote?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,46 @@
+<h1>New Job</h1>
+
+
+<%= form_tag(jobs_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :category_id %><br />
+    <%= number_field_tag :category_id %>
+  </div>
+
+    <div>
+    <%= label_tag :homeowner_id %><br />
+    <%= number_field_tag :homeowner_id %>
+  </div>
+
+    <div>
+    <%= label_tag :contractor_id %><br />
+    <%= number_field_tag :contractor_id %>
+  </div>
+
+    <div>
+    <%= label_tag :description %><br />
+    <%= text_field_tag :description %>
+  </div>
+
+    <div>
+    <%= label_tag :appointment_date %><br />
+    <%= date_select_tag :appointment_date %>
+  </div>
+
+    <div>
+    <%= label_tag :status %><br />
+    <%= text_field_tag :status %>
+  </div>
+
+    <div>
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Create Job" %>
+  </div>
+<% end %>

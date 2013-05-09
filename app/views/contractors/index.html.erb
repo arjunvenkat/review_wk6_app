@@ -1,0 +1,36 @@
+<h1>Contractors</h1>
+
+<p><%= link_to 'Add a New Contractor', new_contractor_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @contractors.each do |contractor| %>
+    <tr>
+      <td><%= contractor.category_id %></td>
+      <td><%= contractor.name %></td>
+      <td><%= contractor.email %></td>
+      <td><%= contractor.phone %></td>
+      <td><%= contractor.address %></td>
+  
+      <td><%= link_to 'Show', contractor_url(contractor) %></td>
+      <td><%= link_to 'Edit', edit_contractor_url(contractor) %></td>
+      <td><%= link_to 'Destroy', contractor_url(contractor), method: 'delete', data: { confirm: "Do you really want to delete this contractor?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
